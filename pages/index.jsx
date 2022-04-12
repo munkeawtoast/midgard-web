@@ -1,8 +1,11 @@
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import ExampleComponent from '../components/ExampleComponent'
+import NaviBar from '../components/NaviBar'
 
 export default function Home() {
+  console.log(styles);
   return (
     <div className={styles.container}>
       <div className={styles.bgWrap}>
@@ -15,11 +18,11 @@ export default function Home() {
           onDragStart={(e)=>{e.preventDefault()}}
         />
       </div>
+      <NaviBar />
       <div className={styles.pageHeader}>
         <h1>Next.js</h1>
       </div>
       <div className={styles.main}>
-        
         <p className={styles.paragraph}>
           <div className={styles.contentHeader}>
             Next.js คืออะไร
@@ -81,8 +84,9 @@ export default function Home() {
                   JSX
                 </a>
               </Link>{" "}
-              คือการที่เราเขียนทุกอย่างเหมือนใน html แต่เรามีแถม tag html เพื่มเติมที่ปกติไม่มีที่เริ่มต้นด้วยตัวพิมพ์ใหญ่ tag พวกนี้คือ component  ที่ทำได้หลายอย่างแต่หลักๆเราก็สร้างเพื่อเป็นชิ้นส่วนประกอบหน้าเว็บ จะมีทั้งแบบที่เค้าสร้างมาให้แล้วเช่นแท็ก Image, Link (เป็นของ Next ถ้าเปิดดู repo web ก็อาจจะไปเห็นมาแล้ว) เดี๋ยวค่อยทำต่อ ค่ดเหนื่อย 
+              คือการที่เราเขียนทุกอย่างเหมือนใน html แต่เรามีแถม tag html เพื่มเติมที่ปกติไม่มีที่เริ่มต้นด้วยตัวพิมพ์ใหญ่ tag พวกนี้คือ component  ที่ทำได้หลายอย่างแต่หลักๆเราก็สร้างเพื่อเป็นชิ้นส่วนประกอบหน้าเว็บ จะมีทั้งแบบที่เค้าสร้างมาให้แล้วเช่นแท็ก Image, Link (เป็นของ Next ถ้าเปิดดู repo web ก็อาจจะไปเห็นมาแล้ว) ที่เหลือเดี๋ยวดูในแถบข้างบนเลยนะ
             </p>
+
           </div>
         </p>
       </div>
